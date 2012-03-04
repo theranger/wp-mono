@@ -3,7 +3,7 @@
 		
 		<?php 
 			if ( ! get_post_meta( $post->ID, 'hide_title', true ) ) {
-				the_title( '<h2>', '</h2>', true );
+				the_title( '<h1>', '</h1>', true );
 			}
 		?>
 		
