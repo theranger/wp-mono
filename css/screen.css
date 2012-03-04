@@ -278,7 +278,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a {
 	border-bottom:4px solid transparent;
 }
-.sf-menu li.current-menu-item a {
+.sf-menu li.current-menu-item a, .sf-menu li.current_page_item a {
 	border-bottom:4px solid #ddd;
 }
 
@@ -288,6 +288,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu a:hover,
 .sf-menu li.current-menu-item a:hover,
+.sf-menu li.current_page_item a:hover,
 .sf-menu li.sfHover ul a:hover,
 .sf-menu li.sfHover a {
 	color:#333;
@@ -299,7 +300,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu {
 	border-bottom:1px solid #ddd;
 }
-.sf-menu li.current-menu-item UL LI A:hover {
+.sf-menu li.current-menu-item UL LI A:hover, .sf-menu li.current_page_item UL LI A:hover {
 	border:0;
 }
 
