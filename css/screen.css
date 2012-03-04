@@ -43,13 +43,13 @@ ul.thumbnail-list h3 a{
 a,
 .promo_text,
 #commentlist .commentmetadata {
-	color: #3c77a0;
+	color: #0d3d7e;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 #commentlist cite a,
 a:hover {
-	color: #003c66;
+	color: #333;
 }
 .menu-contact {
 	color: #ccc;
