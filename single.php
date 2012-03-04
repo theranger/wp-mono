@@ -22,7 +22,7 @@
 				
 				<?php 
 					if ( ! get_post_meta( $post->ID, 'hide_title', true ) ) { 
-						the_title( "<h2 class='entry-title'>", '</h2>', true ); 
+						the_title( "<h1 class='entry-title'>", '</h1>', true ); 
 					}				
 				?>
 				
