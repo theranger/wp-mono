@@ -433,6 +433,9 @@ ___________________________________________________________________ */
 	text-transform: uppercase;
 	line-height: 100%;
 }
+.entry-meta a {
+	color: #999;
+}
 .entry-title {
 	line-height: 120%;
 }
@@ -563,7 +566,7 @@ ___________________________________________________________________ */
 }
 .widget_rss ul .rsswidget {
 	display: block;
-	font-weight: bold;
+	font-weight: normal;
 }
 .widget_rss ul .rssSummary {
 	padding: 0 0 10px 0;
