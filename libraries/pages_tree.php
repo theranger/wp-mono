@@ -55,7 +55,7 @@ class Pages_Tree_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		echo $before_title;
 		if(empty($title))
-			echo get_the_title($parents[$k-1]);
+			echo '<a href="'.get_permalink($parents[$k-1]).'">'.get_the_title($parents[$k-1]).'</a>';
 		else
 			echo $title;
 			
