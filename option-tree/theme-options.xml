@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wp_option_tree>
 <wp_option_tree>
   <row>
     <id>1</id>
