@@ -1,10 +1,10 @@
-<?php	
+<?php
 	// Grab custom settings
-	global $cudazi_theme_options;	
-	$logo_upload = cudazi_get_option( get_option_tree('logo_upload', $cudazi_theme_options, false, false ), get_template_directory_uri() . '/images/logo.png', false ); 
-	$logo_url = cudazi_get_option( get_option_tree('logo_url', $cudazi_theme_options, false, false ), '', false ); 
+	global $cudazi_theme_options;
+	$logo_upload = cudazi_get_option( get_option_tree('logo_upload', $cudazi_theme_options, false, false ), get_template_directory_uri() . '/images/logo.png', false );
+	$logo_url = cudazi_get_option( get_option_tree('logo_url', $cudazi_theme_options, false, false ), '', false );
 	$logo_text_based = cudazi_get_option( get_option_tree('logo_text_based', $cudazi_theme_options, false, false ), '', false );
-	
+
 	// $disable_header_search = cudazi_get_option( get_option_tree('disable_header_search', $cudazi_theme_options, false, false ), '', false );
 ?><!DOCTYPE html>
 <!--[if lt IE 7 ]>	<html lang="en" class="ie6 ie">	<![endif]-->
@@ -22,8 +22,9 @@
 	<!-- // General meta information -->
 
 
-	<!-- Load stylesheets -->	
-	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/screen.css" media="screen" />	
+	<!-- Load stylesheets -->
+	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/screen.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/print.css" media="print" />
 	<?php /* Dynamic CSS from Theme Settings */ include_once(TEMPLATEPATH . "/css/dynamic-css.php"); ?>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<!-- // Load stylesheets -->
@@ -36,22 +37,22 @@
 		wp_enqueue_script("superfish", get_template_directory_uri() . "/js/libs/superfish-combined.js");
 		wp_enqueue_script("cudazi_general", get_template_directory_uri() . "/js/script.js");
 		wp_head(); // do not remove this
-	?>	
+	?>
 	<!--[if lt IE 9]><script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
-	
+
 	<!-- site icons -->
 	<link type="text/css" rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.gif" />
 	<link type="text/css" rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png" />
 	<!-- // site icons -->
-	
+
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="outer">			
-		<div id="header" class="clearfix">				
+	<div id="outer">
+		<div id="header" class="clearfix">
 			<div class="container_12">
-				<?php 
-					$logo_area_size = cudazi_get_option( get_option_tree('logo_area_size', $cudazi_theme_options, false, false ), '', false ); 					
+				<?php
+					$logo_area_size = cudazi_get_option( get_option_tree('logo_area_size', $cudazi_theme_options, false, false ), '', false );
 					if( $logo_area_size == 'tiny' ) {
 						$menu_container_left = 'grid_1';
 						$menu_container_right = 'grid_11';
@@ -69,18 +70,18 @@
 						$menu_container_right = 'grid_10';
 					}
 				?>
-				<div class="<?php echo $menu_container_left; ?>">					
+				<div class="<?php echo $menu_container_left; ?>">
 					<h1 id="logo">
 						<?php /* Assign logo url if set 			*/	if ( $logo_url ) { $logo_upload = $logo_url; } ?>
 						<?php /* If text logo not set, use image 	*/	if ( !$logo_text_based){ ?><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo_upload; ?>" alt="<?php bloginfo('name'); ?>" /></a>
 						<?php /* If text logo set, use the text		*/	}else{ ?><a href="<?php echo home_url(); ?>" class="textlogo"><?php echo $logo_text_based; ?></a><?php } ?>
 					</h1>
 				</div><!--//grid_x-->
-				
+
 				<div class="<?php echo $menu_container_right; ?> menu_container">
 					<ul class='sf-menu'>
 					<?php
-						wp_list_pages('sort_column=menu_order&title_li='); 
+						wp_list_pages('sort_column=menu_order&title_li=');
 						//wp_nav_menu( array( 'menu_class' => 'sf-menu clearfix', 'theme_location' => 'primary', 'fallback_cb' => 'cudazi_menu_fallback' ) ); ?>
 					</ul>
 					<?php
@@ -88,15 +89,14 @@
 						if( $menu_email_link ) {
 							echo "<a href='mailto:" . $menu_email_link . "' class='menu-contact'>" . $menu_email_link . "</a>";
 						}
-					?>					
-				</div><!--//grid_x-->					
-				
-			</div><!--//container_12-->			
+					?>
+				</div><!--//grid_x-->
+
+			</div><!--//container_12-->
 		</div><!--//header-->
-		
+
 		<!-- *** -->
-		
+
 		<div id="main" class="clearfix">
-			<div class="container_12">				
+			<div class="container_12">
 			<?php if ( is_active_sidebar( 'body-top' ) ) { dynamic_sidebar( 'body-top' ); } ?>
-			
