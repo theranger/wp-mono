@@ -1068,4 +1068,12 @@ img.aligncenter {
 }
 
 
+/* Disqus comment system cleanup */
+div#disqus_thread { float: left; width: 100%; margin-top: 20px; }
+div#disqus_thread li { display: block; }
+div#dsq-new-post { margin-top: -20px !important; }
+div#dsq-global-toolbar, div.dsq-options, div#dsq-comments-title, div.dsq-item-trackback { display: none !important; }
+div#dsq-sort-by, div#dsq-sort-by + h3, div#dsq-subscribe, div.dsq-trackback-url { display: none !important; }
+DIV#dsq-reply.dsq-reply h3 { font-size: 1.0em; }
+
 
