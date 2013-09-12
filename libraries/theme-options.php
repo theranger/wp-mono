@@ -7,7 +7,7 @@
 	if( is_admin() ) {		
 		function cudazi_install_optiontree_nag() {
 			if ( current_user_can('update_core') ) {
-				if ( ! is_plugin_active( 'option-tree/index.php' ) ) {
+				if ( ! is_plugin_active( 'option-tree/ot-loader.php' ) ) {
 					echo "<div class='update-nag'>" . __( 'Wait! You need to install and activate the OptionTree plugin! (See Help Files)', 'cudazi' ) . "</div>";
 				}
 			}
