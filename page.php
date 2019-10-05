@@ -1,16 +1,11 @@
-<?php
-/**
- * Default Page Template
- */
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div class="grid_8" id="primary">
-		<?php // Run the loop to output the posts. ?>
-		<?php get_template_part('loop', 'page'); ?>
-	</div><!--//grid_X-->
+<?php if (!have_posts()) : ?>
+	<?php get_template_part("templates/page", "notfound"); ?>
+<?php endif; ?>
 
-	<div class="grid_4" id="aside">
-		<?php get_sidebar(); ?>
-	</div><!--//grid_X-->
+<?php if (is_page()) while (have_posts()) : the_post(); ?>
+	<?php get_template_part("templates/" . get_post_type(), get_post_custom()["custom-layout"][0]); ?>
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
