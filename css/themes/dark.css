@@ -39,8 +39,9 @@ hr {
 	background-image: url(../../images/hr_dark.gif);
 	background-repeat: repeat-x;
 }
+
 #commentlist .right-comments {
-	background:url(../../images/hr_vertical_dark.gif) repeat-y left center;
+	background: url(../../images/hr_vertical_dark.gif) repeat-y left center;
 }
 
 #author,
