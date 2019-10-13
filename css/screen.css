@@ -129,8 +129,11 @@ dt {
 	margin-top: 1em;
 }
 
-div.widget_recent_entries ul, div.widget_pagestree ul {
+aside ul {
 	list-style-type: none;
 	padding: 0;
-	line-height: 2em;
+}
+
+aside ul li {
+	margin-bottom: 1.2em;
 }
